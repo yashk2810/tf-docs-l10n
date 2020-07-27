@@ -3,7 +3,7 @@
 name: Welcome
 on:
   pull_request:
-    types: [opened, labeled]
+    types: [opened]
 
 jobs:
   message:
@@ -39,7 +39,7 @@ jobs:
           msg+="</ul>\n"
 
           msg+="<h4>Format and style</h4>\n"
-          msg+="Please use the TensorFlow docs <a href='https://github.com/tensorflow/docs/tree/master/tools/tensorflow_docs/tools'>notebook tools</a> to format for consistent source diffs and lint for style:\n"
+          msg+="Use the TensorFlow docs <a href='https://github.com/tensorflow/docs/tree/master/tools/tensorflow_docs/tools'>notebook tools</a> to format for consistent source diffs and lint for style:\n"
           msg+="<pre>\n$ python3 -m pip install -U --user git+https://github.com/tensorflow/docs\n<br/>"
           msg+="$ python3 -m tensorflow_docs.tools.nbfmt notebook.ipynb\n<br/>"
           msg+="$ python3 -m tensorflow_docs.tools.nblint --arg=repo:tensorflow/docs-1l0n \ \n"
